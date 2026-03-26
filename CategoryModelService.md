@@ -1,4 +1,4 @@
-# Category Model and Service Documentation
+# Category Model, Service, and Controller Documentation
 
 ## Category Model
 
@@ -31,3 +31,20 @@ Handles business logic for categories.
 ### Exceptions
 - Throws `ResourceNotFoundException` if category not found
 - Throws `AlreadyExistsException` if category name exists
+
+---
+
+## Category Controller
+
+The Category controller exposes RESTful endpoints for category operations. Example endpoints:
+- `POST /categories` - Create a new category
+- `GET /categories/{id}` - Retrieve category by ID
+- `GET /categories` - List all categories
+- `PUT /categories/{id}` - Update category by ID
+- `DELETE /categories/{id}` - Delete category by ID
+
+### Controller Responsibilities
+- Validate incoming requests
+- Call appropriate service methods
+- Handle responses and errors
+- Enforce authentication/authorization as needed
