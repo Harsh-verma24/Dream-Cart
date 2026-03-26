@@ -1,7 +1,7 @@
-# Image Model and Services Documentation
+# Image Model, Services, and Controller Documentation
 
 ## Overview
-This document describes the Image model and its related services in the project. It covers the data structure, key fields, and the main service operations for managing images.
+This document describes the Image model, its related services, and the controller layer in the project. It covers the data structure, key fields, main service operations, and controller endpoints for managing images.
 
 ## Image Model
 The Image model represents an image entity in the system. Typical fields include:
@@ -26,6 +26,20 @@ Image services provide operations to manage images, such as:
 - `updateImage(imageId, updateData)`
 - `deleteImage(imageId)`
 - `listImages(filterOptions)`
+
+## Image Controller
+The Image controller exposes RESTful endpoints for image operations. Example endpoints:
+- `POST /images` - Create a new image
+- `GET /images/{id}` - Retrieve image by ID
+- `PUT /images/{id}` - Update image by ID
+- `DELETE /images/{id}` - Delete image by ID
+- `GET /images` - List images (with optional filters)
+
+### Controller Responsibilities
+- Validate incoming requests
+- Call appropriate service methods
+- Handle responses and errors
+- Enforce authentication/authorization as needed
 
 ## Notes
 - Images should be validated for type and size before upload.
